@@ -6,3 +6,9 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
+#-----------------------------------------
+#create a cluster using kubedeam(initialize Kubernates)
+kubeadm init --apiserver-advertise-address=172.31.83.103 --pod-network-cidr=192.168.0.0/16
+# if error will an occur
+**kubeadm init --ignore-preflight-errors=all
+
